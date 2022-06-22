@@ -4,7 +4,8 @@
       <div class="mt-10">
         <ul>
           <li class="my-12 text-center">
-            <a href="#">
+            <router-link to="/profile">
+              <!-- <a href="#"> -->
               <span
                 class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200"
               >
@@ -25,10 +26,11 @@
                   />
                 </svg>
               </span>
-            </a>
+              <!-- </a> -->
+            </router-link>
           </li>
           <li class="my-12 text-center">
-            <a href="#">
+            <router-link to="/portfolio">
               <span
                 class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200"
               >
@@ -49,10 +51,10 @@
                   />
                 </svg>
               </span>
-            </a>
+            </router-link>
           </li>
           <li class="my-12 text-center">
-            <a href="#">
+            <router-link to="/article">
               <span
                 class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200"
               >
@@ -73,10 +75,10 @@
                   />
                 </svg>
               </span>
-            </a>
+            </router-link>
           </li>
           <li class="my-12 text-center">
-            <a href="#">
+            <router-link to="/photography">
               <span
                 class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200"
               >
@@ -102,7 +104,7 @@
                   />
                 </svg>
               </span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
