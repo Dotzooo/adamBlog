@@ -1,5 +1,5 @@
 <template>
-  <div>portfolio</div>
+  <div class="flex flex-col">portfolio</div>
 </template>
 
 <script>
