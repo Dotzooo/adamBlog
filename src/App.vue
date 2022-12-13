@@ -1,15 +1,9 @@
 <template>
   <main
-    class="flex dark:bg-gray-800 font-mono bg-white relative overflow-hidden h-screen"
+    class="flex first-letter:bg-white dark:bg-black font-mono relative overflow-hidden h-screen"
   >
     <Navbar @dark-switch="onDarkSwitch" />
-    <div class="w-full flex relative z-20 items-center">
-      <div
-        class="container mx-auto px-6 flex flex-col justify-between items-center relative py-4"
-      >
-        <router-view />
-      </div>
-    </div>
+    <router-view />
   </main>
 </template>
 <script>
@@ -28,3 +22,12 @@ export default {
   },
 };
 </script>
+
+<style>
+body {
+  background-color: #fff;
+  background-image: linear-gradient(#000 1px, transparent 0),
+    linear-gradient(90deg, #000 1px, transparent 0);
+  background-size: 100px 450px, 400px 400px;
+}
+</style>

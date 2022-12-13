@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white dark:bg-gray-800 w-20 justify-between flex flex-col">
+  <nav class="bg-white dark:bg-black w-20 justify-between flex flex-col">
     <div class="mt-10 mb-10">
       <div class="mt-10">
         <ul>
