@@ -8,7 +8,7 @@
         <div
           class="about-content_avatar flex justify-center items-center w-full md:w-1/2"
         >
-          <img src="src/image/self.jpg" class="object-fill" alt="" />
+          <img src="@/image/self.jpg" class="object-fill" alt="" />
         </div>
         <div class="flex flex-col justify-center w-full p-5 md:px-5 md:w-1/2">
           <p class="dark:text-white mb-5">
