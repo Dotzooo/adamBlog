@@ -1,33 +1,27 @@
 <template>
-  <main
-    class="flex first-letter:bg-white dark:bg-black font-mono relative overflow-hidden h-screen"
+  <div
+    class="flex flex-col transition duration-500 ease-in-out"
+    :style="{ backgroundColor: backgroundColor }"
   >
-    <Navbar @dark-switch="onDarkSwitch" />
-    <router-view />
-  </main>
+    <Header @dark-switch="onDarkSwitch" />
+    <main class="flex dark:bg-black font-mono relative">
+      <router-view />
+    </main>
+    <Footer @change-background="changeBackgroundColor" />
+  </div>
 </template>
-<script>
-import Navbar from "./components/navbar.vue";
+<script setup>
+import { ref } from "vue";
+import Header from "./components/header.vue";
+import Footer from "./components/footer.vue";
 
-export default {
-  components: { Navbar },
-  setup() {
-    function onDarkSwitch() {
-      document.documentElement.classList.toggle("dark");
-    }
+const backgroundColor = ref("#fff");
 
-    return {
-      onDarkSwitch,
-    };
-  },
-};
-</script>
-
-<style>
-body {
-  background-color: #fff;
-  background-image: linear-gradient(#000 1px, transparent 0),
-    linear-gradient(90deg, #000 1px, transparent 0);
-  background-size: 100px 450px, 400px 400px;
+function onDarkSwitch() {
+  document.documentElement.classList.toggle("dark");
 }
-</style>
+
+function changeBackgroundColor(color) {
+  backgroundColor.value = color;
+}
+</script>

@@ -1,0 +1,34 @@
+.contact {
+    &-header {
+    }
+
+    &-content {
+        border-top: 1px solid #000;
+
+        &_link {
+            // font-family: "Poppins", sans-serif;
+            cursor: pointer;
+
+            transition: 0.5s;
+
+            &__emoji {
+                display: none;
+            }
+        }
+        &_link:hover {
+            color: #fff;
+            border-radius: 5px;
+            background: #000;
+            text-shadow:
+                0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+
+            .contact-content_link__emoji {
+                padding-left: 10px;
+                display: inline-block;
+            }
+        }
+    }
+}
