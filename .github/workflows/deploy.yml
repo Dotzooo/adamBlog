@@ -1,19 +1,27 @@
+# workflow 的名稱，會在 Github Action 頁面上顯示的名稱（選擇性）
 name: Deploy
 
+# 只有在 push 到 main 分支上才會觸發此 workflow
 on:
   push:
     branches:
       - main
 
+# 建立一個 job
 jobs:
+  # 將此 job 的名稱設定為 'build'
   build:
     name: Build
+    # 執行在最新版本的 ubuntu runner 上
     runs-on: ubuntu-latest
 
     steps:
+      # 使用 actions/checkout@v3 這個官方的 action
+      # 可以查看 workflow 的執行狀況，並對 workflow 的虛擬環境進行指令操作（例如搭建測試環境）
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      # 設定 NODE 環境
       - name: Setup Node
         uses: actions/setup-node@v3
 
